@@ -11,7 +11,7 @@ MsgBox, Autotyping from clipboard.
 Loop, parse, clipboard
 {
 	TempChar := SubStr(clipboard, A_Index, 1)
-	if TempChar != `n
+	if TempChar != `r
 	{
 		SendRaw %TempChar%
 		sleep 0.1
