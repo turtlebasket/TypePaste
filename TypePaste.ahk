@@ -3,7 +3,9 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-Menu, Tray, icon, logo.ico
+; Use if running as script in directory.
+if FileExist(".\logo.ico")
+	Menu, Tray, icon, logo.ico
 
 #IfWinActive
 ^!+v::
